@@ -1,0 +1,78 @@
+/* Estilos para la sección de noticias */
+.news {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000; /* Fondo negro para mantener la coherencia */
+}
+
+.news h2 {
+    font-size: 2rem;
+    color: #fff; /* Color blanco para el título */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff; /* Línea decorativa debajo del título */
+    padding-bottom: 10px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #333; /* Bordes sutiles para separar cada noticia */
+    border-radius: 8px; /* Bordes redondeados para cada ítem de noticia */
+    background-color: #222; /* Fondo gris oscuro para cada ítem de noticia */
+}
+
+.news-img {
+    width: 100px; /* Tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 15px; /* Espacio entre la imagen y el enlace */
+    border-radius: 4px; /* Bordes redondeados opcionales */
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #fff; /* Color blanco para el texto del enlace */
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: #3CBC8D; /* Color de texto al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    .news {
+        padding: 15px;
+    }
+
+    .news h2 {
+        font-size: 1.5rem;
+    }
+
+    .news-img {
+        width: 80px; /* Tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .news-item a {
+        font-size: 1rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .news h2 {
+        font-size: 1.2rem;
+    }
+
+    .news-img {
+        width: 60px; /* Tamaño de la imagen en pantallas muy pequeñas */
+    }
+
+    .news-item a {
+        font-size: 0.9rem; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+    }
+}

@@ -1,0 +1,149 @@
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Fondo del encabezado */
+    color: #fff; /* Texto blanco en el encabezado */
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: #575757;
+}
+
+/* Estilos para la sección de resultados */
+.results-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh; /* Altura de la sección */
+    padding: 20px;
+    text-align: center;
+}
+
+.results-link {
+    text-decoration: none;
+}
+
+.results-link h2 {
+    background: linear-gradient(45deg, #f00, #ff0); /* Gradiente de color */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.results-link h2:hover {
+    background: linear-gradient(45deg, #ff0, #f00); /* Cambio de gradiente al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+.results-image-container {
+    margin-top: 20px; /* Espacio arriba de la imagen */
+}
+
+.results-image-container img {
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados en la imagen */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .results-link h2 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+        padding: 15px;
+    }
+
+    .results-image-container img {
+        max-width: 90%; /* Ajusta el ancho máximo de la imagen */
+    }
+}
+
+/* Media queries para pantallas extra pequeñas */
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-button {
+        font-size: 1rem; /* Tamaño de fuente más pequeño en el botón del menú */
+    }
+
+    h1 {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .results-link h2 {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+        padding: 10px;
+    }
+
+    .results-image-container img {
+        max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    }
+}

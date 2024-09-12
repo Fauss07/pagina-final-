@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Baloncesto</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Página de Baloncesto</h1>
+            <div class="dropdown">
+                <button class="dropdown-button">Menú</button>
+                <div class="dropdown-content">
+                    <a href="./index.html">Inicio</a>
+                    <a href="./resultados/resultados.html">Resultados</a>
+                    <a href="./noticias/noticias.html">Noticias</a>
+                    <a href="./equipos/equipos1.html">Equipos</a>
+                    <a href="calendario/calendario.html">Calendario</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Enlaces Útiles</h2>
+            <ul>
+                <li><a href="noticias.html" id="noticias-link">NOTICIAS</a></li>
+                <li><a href="equipos.html" id="equipos-link">EQUIPOS</a></li>
+                <li><a href="partidos.html" id="partidos-link">PARTIDOS</a></li>
+            </ul>
+        </section>
+        <section class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./imaguenes/jjoo.jpg" alt="Basketball Image 1">
+                </div>
+                <div class="slide">
+                    <img src="./imaguenes/1.jpg" alt="Basketball Image 2">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1602741419467-678979ac4d7c" alt="Basketball Image 3">
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
+        </section>
+    </main>
+
+        <footer>
+            <div class="footer-container">
+                <p>Página de Baloncesto.</p>
+                <div class="footer-info">
+                    <p><strong>Contacto:</strong> fausto0107@hotmail.com</p>
+                    <p><strong>Teléfono:</strong> +123 456 789</p>
+                    <p><strong>Dirección:</strong> Calle Ejemplo 123, Ciudad, País</p>
+                </div>
+            </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            if (index >= totalSlides) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = totalSlides - 1;
+            } else {
+                slideIndex = index;
+            }
+            const offset = -slideIndex * 100;
+            document.querySelector(".slides").style.transform = `translateX(${offset}%)`;
+        }
+
+        document.getElementById("next").addEventListener("click", () => {
+            showSlide(slideIndex + 1);
+        });
+
+        document.getElementById("prev").addEventListener("click", () => {
+            showSlide(slideIndex - 1);
+        });
+
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>
